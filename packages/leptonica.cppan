@@ -1,0 +1,39 @@
+files:
+    - src/.*\.h
+    - src/.*\.c
+
+exclude_from_build:
+    - src/endiantest.c
+    - src/xtractprotos.c
+    - src/freetype.c
+
+include_directories:
+    public: src
+
+check_function_exists: fmemopen
+
+post_sources:
+    if (MSVC)
+        file(GLOB_RECURSE csrc "*.c")
+        set_source_files_properties(${csrc} PROPERTIES LANGUAGE CXX)
+    endif()
+
+options:
+    any:
+        definitions:
+            public: STDC_HEADERS
+
+            public: HAVE_LIBGIF
+            public: HAVE_LIBJPEG
+            public: HAVE_LIBPNG
+            public: HAVE_LIBTIFF
+            public: HAVE_LIBWEBP
+            public: HAVE_LIBZ
+
+dependencies:
+    pvt.cppan.demo.png: 1
+    pvt.cppan.demo.gif: 5
+    pvt.cppan.demo.jpeg: master
+    pvt.cppan.demo.tiff: master
+    pvt.cppan.demo.webp: 0
+

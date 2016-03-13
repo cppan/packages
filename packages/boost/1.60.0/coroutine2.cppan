@@ -1,0 +1,7 @@
+files:
+    includes: include/.*
+    sources: src/.*
+
+dependencies:
+    pvt.cppan.demo.boost.context: "*"
+    pvt.cppan.demo.boost.core: "*"

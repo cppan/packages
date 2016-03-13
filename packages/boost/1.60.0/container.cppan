@@ -1,0 +1,11 @@
+files:
+    - include/.*
+    - src/.*
+
+exclude_from_build:
+    - src/dlmalloc_2_8_6.c
+    - src/dlmalloc_ext_2_8_6.c
+
+dependencies:
+    pvt.cppan.demo.boost.core: "*"
+    pvt.cppan.demo.boost.intrusive: "*"

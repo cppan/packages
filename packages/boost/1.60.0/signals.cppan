@@ -1,0 +1,6 @@
+files:
+    - "include/.*\\.hpp"
+    - "src/.*\\.cpp"
+
+dependencies:
+    pvt.cppan.demo.boost.core: "*"

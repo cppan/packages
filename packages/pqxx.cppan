@@ -1,0 +1,5 @@
+license: COPYING
+files: .*
+
+dependencies:
+    pvt.cppan.demo.cmake.postgresql: master

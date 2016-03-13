@@ -1,0 +1,5 @@
+license: LICENSE
+files: code/mach7/.*
+
+include_directories:
+    public: code

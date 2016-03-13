@@ -1,0 +1,66 @@
+root_project: pvt.cppan.demo.google.highwayhash
+
+projects:
+    vector:
+        license: LICENSE
+        files:
+            - code_annotation.h
+            - vec.h
+            - vec2.h
+        include_directories:
+            public:
+                - .
+
+    sip_hash:
+        license: LICENSE
+        files:
+            - sip_hash.h
+            - sip_hash.cc
+        include_directories:
+            public:
+                - .
+        dependencies: vector
+
+    sip_tree_hash:
+        license: LICENSE
+        files:
+            - sip_tree_hash.h
+            - sip_tree_hash.cc
+        include_directories:
+            public:
+                - .
+        dependencies:
+            - vector
+            - sip_hash
+
+    scalar_sip_tree_hash:
+        license: LICENSE
+        files:
+            - scalar_sip_tree_hash.h
+            - scalar_sip_tree_hash.cc
+        include_directories:
+            public:
+                - .
+        dependencies:
+            - vector
+            - sip_hash
+
+    highway_tree_hash:
+        license: LICENSE
+        files:
+            - highway_tree_hash.h
+            - highway_tree_hash.cc
+        include_directories:
+            public:
+                - .
+        dependencies: vector
+
+    scalar_highway_tree_hash:
+        license: LICENSE
+        files:
+            - scalar_highway_tree_hash.h
+            - scalar_highway_tree_hash.cc
+        include_directories:
+            public:
+                - .
+        dependencies: vector

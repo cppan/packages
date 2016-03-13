@@ -1,0 +1,8 @@
+license: LICENSE
+files:
+    - include/.*
+    - src/.*
+
+dependencies:
+    pvt.cppan.demo.boost.iterator: "*"
+    pvt.cppan.demo.boost.smart_ptr: "*"

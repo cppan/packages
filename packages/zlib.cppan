@@ -1,0 +1,10 @@
+files:
+    - "[^/]*\\.h"
+    - "[^/]*\\.c"
+include_directories:
+    public: .
+
+options:
+    shared:
+        definitions:
+            public: ZLIB_DLL

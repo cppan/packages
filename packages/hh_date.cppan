@@ -1,0 +1,3 @@
+files: date.h
+include_directories:
+    public: .

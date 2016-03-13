@@ -1,0 +1,7 @@
+files:
+    - include/.*
+    - src/.*
+
+dependencies:
+    pvt.cppan.demo.boost.algorithm: "*"
+    pvt.cppan.demo.boost.smart_ptr: "*"

@@ -1,0 +1,54 @@
+root_project: pvt.cppan.demo.google.googletest
+
+projects:
+    gtest:
+        license: googletest/LICENSE
+        files:
+            - googletest/include/.*\.h
+            - googletest/src/.*
+
+        include_directories:
+            public: googletest/include
+            private: googletest
+
+        exclude_from_build:
+            - googletest/src/gtest.cc
+            - googletest/src/gtest-filepath.cc
+            - googletest/src/gtest-port.cc
+            - googletest/src/gtest-test-part.cc
+            - googletest/src/gtest-death-test.cc
+            - googletest/src/gtest-printers.cc
+            - googletest/src/gtest-typed-test.cc
+
+            - googletest/src/gtest_main.cc
+
+    gtest_main:
+        license: googletest/LICENSE
+        files: googletest/src/gtest_main.cc
+        dependencies: gtest
+
+    gmock:
+        license: googlemock/LICENSE
+        files:
+            - googlemock/include/.*\.h
+            - googlemock/src/.*
+
+        include_directories:
+            public: googlemock/include
+            private: googlemock
+
+        exclude_from_build:
+            - googlemock/src/gmock.cc
+            - googlemock/src/gmock-cardinalities.cc
+            - googlemock/src/gmock-internal-utils.cc
+            - googlemock/src/gmock-matchers.cc
+            - googlemock/src/gmock-spec-builders.cc
+
+            - googlemock/src/gmock_main.cc
+
+        dependencies: gtest
+
+    gmock_main:
+        license: googlemock/LICENSE
+        files: googlemock/src/gmock_main.cc
+        dependencies: gmock

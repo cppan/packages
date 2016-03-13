@@ -1,0 +1,41 @@
+files:
+    - include/.*
+    - src/.*
+
+exclude_from_build:
+    - src/pthread/once_atomic.cpp
+
+post_sources: |
+    if (WIN32)
+        list(REMOVE_ITEM src "${CMAKE_CURRENT_SOURCE_DIR}/src/pthread/thread.cpp")
+        list(REMOVE_ITEM src "${CMAKE_CURRENT_SOURCE_DIR}/src/pthread/once.cpp")
+        list(REMOVE_ITEM src "${CMAKE_CURRENT_SOURCE_DIR}/src/pthread/once_atomic.cpp")
+    else()
+        list(REMOVE_ITEM src "${CMAKE_CURRENT_SOURCE_DIR}/src/win32/thread.cpp")
+        list(REMOVE_ITEM src "${CMAKE_CURRENT_SOURCE_DIR}/src/win32/tss_dll.cpp")
+        list(REMOVE_ITEM src "${CMAKE_CURRENT_SOURCE_DIR}/src/win32/tss_pe.cpp")
+    endif()
+
+dependencies:
+    pvt.cppan.demo.boost.chrono: "*"
+    pvt.cppan.demo.boost.core: "*"
+    pvt.cppan.demo.boost.date_time: "*"
+    pvt.cppan.demo.boost.winapi: "*"
+
+options:
+    any:
+        definitions:
+            private: BOOST_THREAD_BUILD_LIB
+    static:
+        post_sources: |
+            if (WIN32)
+                list(REMOVE_ITEM src "${CMAKE_CURRENT_SOURCE_DIR}/src/win32/tss_dll.cpp")
+            endif()
+    shared:
+        definitions:
+            private: BOOST_THREAD_BUILD_DLL
+            interface: BOOST_THREAD_USE_DLL
+        post_sources: |
+            if (WIN32)
+                list(REMOVE_ITEM src "${CMAKE_CURRENT_SOURCE_DIR}/src/win32/tss_pe.cpp")
+            endif()

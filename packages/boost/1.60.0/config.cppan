@@ -1,0 +1,10 @@
+files:
+    - include/.*
+    - src/.*
+
+post_sources: |
+    if (WIN32)
+        file(WRITE ${CMAKE_CURRENT_SOURCE_DIR}/include/boost/config/auto_link.hpp "")
+    endif()
+
+

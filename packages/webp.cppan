@@ -1,0 +1,6 @@
+license: COPYING
+files:
+    - src/.*\.h
+    - src/.*\.c
+include_directories:
+    public: src

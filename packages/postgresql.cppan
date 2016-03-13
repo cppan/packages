@@ -1,0 +1,10 @@
+empty: true
+
+post_sources: |
+    find_package(PostgreSQL REQUIRED)
+    find_library(pg_lib ${PostgreSQL_LIBRARIES} HINTS ${PostgreSQL_LIBRARY_DIRS})
+
+options:
+    any:
+        include_directories: ${PostgreSQL_INCLUDE_DIRS}
+        link_libraries: ${pg_lib}

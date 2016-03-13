@@ -1,0 +1,35 @@
+files:
+    - include/.*
+    - src/.*
+
+post_sources: |
+    if (NOT WIN32)
+        list(REMOVE_ITEM src "${CMAKE_CURRENT_SOURCE_DIR}/src/debug_output_backend.cpp")
+        list(REMOVE_ITEM src "${CMAKE_CURRENT_SOURCE_DIR}/src/light_rw_mutex.cpp")
+        list(REMOVE_ITEM src "${CMAKE_CURRENT_SOURCE_DIR}/src/dump_avx2.cpp")
+        list(REMOVE_ITEM src "${CMAKE_CURRENT_SOURCE_DIR}/src/dump_ssse3.cpp")
+    endif()
+
+dependencies:
+    pvt.cppan.demo.boost.asio: "*"
+    pvt.cppan.demo.boost.atomic: "*"
+    pvt.cppan.demo.boost.core: "*"
+    pvt.cppan.demo.boost.date_time: "*"
+    pvt.cppan.demo.boost.filesystem: "*"
+    pvt.cppan.demo.boost.parameter: "*"
+    pvt.cppan.demo.boost.property_tree: "*"
+    pvt.cppan.demo.boost.regex: "*"
+    pvt.cppan.demo.boost.spirit: "*"
+    pvt.cppan.demo.boost.thread: "*"
+    pvt.cppan.demo.boost.type_index: "*"
+    pvt.cppan.demo.boost.winapi: "*"
+
+options:
+    any:
+        definitions:
+            public: BOOST_LOG_WITHOUT_EVENT_LOG
+            private: BOOST_LOG_BUILDING_THE_LIB
+    shared:
+        definitions:
+            public: BOOST_LOG_DYN_LINK
+            private: BOOST_LOG_DLL

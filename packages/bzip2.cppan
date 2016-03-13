@@ -1,0 +1,20 @@
+license: LICENSE
+root_directory: bzip2-1.0.6
+files:
+    - bzlib.h
+    - bzlib_private.h
+    - blocksort.c
+    - bzlib.c
+    - compress.c
+    - crctable.c
+    - decompress.c
+    - huffman.c
+    - randtable.c
+include_directories:
+    public: .
+
+options:
+    shared:
+        definitions:
+            public: BZ_DLL
+            interface: BZ_IMPORT

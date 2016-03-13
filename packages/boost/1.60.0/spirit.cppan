@@ -1,0 +1,12 @@
+files:
+    - include/.*\.hpp
+    - include/.*\.ipp
+
+dependencies:
+    pvt.cppan.demo.boost.algorithm: "*"
+    pvt.cppan.demo.boost.core: "*"
+    pvt.cppan.demo.boost.iostreams: "*"
+    pvt.cppan.demo.boost.regex: "*"
+    pvt.cppan.demo.boost.function_types: "*"
+    pvt.cppan.demo.boost.phoenix: "*"
+    pvt.cppan.demo.boost.unordered: "*"

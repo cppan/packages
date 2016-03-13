@@ -1,0 +1,7 @@
+root_directory: sqlite-amalgamation-3110000
+files:
+    - sqlite3.h
+    - sqlite3ext.h
+    - sqlite3.c
+include_directories:
+    public: .

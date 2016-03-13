@@ -1,0 +1,8 @@
+license: LICENSE
+files:
+    - include/.*\.h
+    - src/.*\.cpp
+    - src/.*\.h
+
+dependencies:
+    pvt.cppan.demo.rbock.sqlpp11: master

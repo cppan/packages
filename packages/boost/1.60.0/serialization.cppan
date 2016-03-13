@@ -1,0 +1,6 @@
+files:
+    - include/.*
+    - src/.*
+
+dependencies:
+    pvt.cppan.demo.boost.spirit: "*"

@@ -1,0 +1,5 @@
+license: LICENSE
+files: include/.*\.h
+
+dependencies:
+    pvt.cppan.demo.howardhinnant.date: master

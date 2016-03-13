@@ -1,0 +1,8 @@
+files:
+    - include/.*
+    - src/.*
+
+dependencies:
+    pvt.cppan.demo.zlib: 1
+    pvt.cppan.demo.bzip2: 1
+    pvt.cppan.demo.boost.core: "*"

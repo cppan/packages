@@ -1,0 +1,10 @@
+files:
+    - include/.*
+    - src/.*
+
+include_directories:
+    private:
+        - src/tr1
+
+dependencies:
+    pvt.cppan.demo.boost.core: "*"

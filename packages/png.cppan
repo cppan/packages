@@ -1,0 +1,7 @@
+license: LICENSE
+root_directory: lpng1621
+files: .*
+include_directories:
+    public: .
+dependencies:
+    pvt.cppan.demo.zlib: 1

@@ -1,0 +1,4 @@
+license: COPYING
+files: dtl/.*
+include_directories:
+    - .

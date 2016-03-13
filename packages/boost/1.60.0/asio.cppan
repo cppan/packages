@@ -1,0 +1,8 @@
+files:
+    - include/.*\.hpp
+    - include/.*\.ipp
+
+dependencies:
+    pvt.cppan.demo.boost.date_time: "*"
+    pvt.cppan.demo.boost.regex: "*"
+    pvt.cppan.demo.boost.system: "*"

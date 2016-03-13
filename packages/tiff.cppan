@@ -1,0 +1,9 @@
+license: COPYRIGHT
+
+files: .*
+
+include_directories:
+    public: .
+
+dependencies:
+    pvt.cppan.demo.zlib: 1
