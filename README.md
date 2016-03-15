@@ -3,7 +3,7 @@
 See some notable libraries below. All are prefixed with `pvt.cppan.demo`. Many of them were taken from master, so do not consider as stable!
 
 1. boost 1.60.0 (not all libraries are tested)
-1. boost experimental libs (from incubator): fit, di
+1. boost experimental or new libs: fit, di, hana
 1. sqlite3
 1. gsl (should be microsoft.gsl)
 1. google's protobuf, googletest, highwayhash
